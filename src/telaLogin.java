@@ -50,19 +50,15 @@ public class telaLogin extends JDialog {
 
     private void onOK() {
         String nome = text_nome.getText();
-        System.out.println(nome);
         String endereco = text_endereco.getText();
-        System.out.println(endereco);
         String email = text_email.getText();
-        System.out.println(email);
-        String telefone = text_telefone.getText();
-        System.out.println(telefone);
-        String dia = text_dia.getText();
-        System.out.println(dia);
-        String mes = text_mes.getText();
-        System.out.println(mes);
-        String ano = text_ano.getText();
-        System.out.println(ano);
+        long telefone = Long.parseLong(text_telefone.getText());
+        int dia = Integer.parseInt(text_dia.getText());
+        int mes = Integer.parseInt(text_mes.getText());
+        int ano = Integer.parseInt(text_ano.getText());
+
+        CadernoDeEnderecos caderno = new CadernoDeEnderecos(ano, mes, dia, email, telefone, nome);
+        JOptionPane.showMessageDialog(null, "Cadastro salvo!\n" + "Nome: " + caderno.getNome() + "\nTelefone: " + caderno.getTelefone() + "\nEmail: " + caderno.getEmail() + "\nAniversário: " + caderno.getDiaNiver() + "/" + caderno.getMesNiver() + "/" + caderno.getAnoNiver());
     }
 
     private void onCancel() {
