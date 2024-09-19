@@ -1,5 +1,9 @@
 package src.exe123;
 
+import javax.swing.*;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
 public class JavaAplication {
     
     public static void main(String[] args) {
@@ -27,7 +31,12 @@ public class JavaAplication {
     }
 
     private static void exe3() {
-
+        Data dataAtual = new Data();
+        int dia = Integer.parseInt(JOptionPane.showInputDialog("Digite o dia"));
+        int mes = Integer.parseInt(JOptionPane.showInputDialog("Digite o mes"));
+        int ano = Integer.parseInt(JOptionPane.showInputDialog("Digite o ano"));
+        Data dataDigitada = new Data(dia, mes, ano);
+        JOptionPane.showMessageDialog(null, "Data atual:" + dataAtual + "Data digitada: " + dataDigitada);
     }
         
 }
