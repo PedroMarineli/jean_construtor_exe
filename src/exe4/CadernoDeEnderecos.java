@@ -1,4 +1,4 @@
-package src;
+package src.exe4;
 
 public class CadernoDeEnderecos {
     private String nome;
